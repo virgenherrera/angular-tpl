@@ -1,16 +1,24 @@
 {
   "name": "angular-tpl",
   "version": "0.0.0",
+  "license": "MIT",
+  "engines": {
+    "node": "^16.10.0",
+    "npm": "^8.3.1"
+  },
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "local:ci": "npm run check:eslint && npm run check:prettier && npm run check:coverage && npm run build:prod",
     "check:eslint": "eslint \"src/**/*.ts\"",
-    "check:prettier": "prettier --check \"src/**/*.ts\""
+    "check:prettier": "prettier --check \"src/**/*.ts\"",
+    "check:coverage": "ng test --no-watch --code-coverage --browsers=ChromeHeadless",
+    "build:prod": "ng build --optimization --progress --subresource-integrity --delete-output-path"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^14.0.0",
     "@angular/common": "^14.0.0",

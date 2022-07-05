@@ -1,27 +1,40 @@
 # AngularTpl
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
+## Description
 
-## Development server
+basic [Angular](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+1. install dependencies.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+npm install
+```
 
-## Build
+## Running the app
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+# development with watch mode.
+$ npm run start
 
-## Running unit tests
+# production mode.
+$ npm run build:prod && npx http-server ./dist/angular-tpl/
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Testing the app
 
-## Running end-to-end tests
+```bash
+# run unit/integration tests.
+$ npm run test
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# run unit/integration tests with code coverage.
+$ npm run check:coverage
+```
 
-## Further help
+## run local CI (before pull request)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+# run unit/integration tests.
+$ npm run local:ci
+```
